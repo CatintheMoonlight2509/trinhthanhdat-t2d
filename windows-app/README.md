@@ -1,6 +1,6 @@
 # CMkey cho Windows
 
-CMkey là bộ gõ portable của T2D Team dành cho Windows. Chạy trực tiếp bằng `CMkey.exe`, không cần installer.
+CMkey cho Windows là công cụ biến đổi ký tự từ bàn phím, hoạt động qua biểu tượng khay hệ thống. Chạy trực tiếp bằng `CMkey.exe`, không cần installer.
 
 ## Cách dùng
 
@@ -11,7 +11,7 @@ CMkey là bộ gõ portable của T2D Team dành cho Windows. Chạy trực ti�
 
 ## Hoạt động trên máy
 
-CMkey dùng global low-level keyboard hook để nhận phím từ các ứng dụng và biến đổi ký tự ngay trên máy. Ứng dụng không tự yêu cầu quyền Administrator, không cài service hoặc startup system-wide, và không cần kết nối mạng để xử lý bộ gõ. Có thể đóng hoàn toàn từ menu khay hệ thống.
+CMkey nhận phím bạn gõ, rồi thay thế các ký tự phù hợp theo chế độ đang chọn ngay trên máy. Ứng dụng không tự yêu cầu quyền Administrator, không cài service hoặc startup system-wide, và không cần kết nối mạng để xử lý. Có thể đóng hoàn toàn từ menu khay hệ thống.
 
 Vì đây là bản portable chưa có chứng thư Authenticode, Windows SmartScreen hoặc phần mềm bảo mật có thể hiển thị cảnh báo. Chỉ nên tải từ Release chính thức và kiểm tra SHA-256 trước khi chạy.
 

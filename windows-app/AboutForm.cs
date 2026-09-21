@@ -72,7 +72,7 @@ namespace CMkeyCombat
             }, 0, 0);
             var intro = new Label
             {
-                Text = "Phiên bản Windows portable · T2D Team",
+                Text = "CMkey cho Windows là công cụ biến đổi ký tự từ bàn phím,\r\nhoạt động qua biểu tượng khay hệ thống.",
                 AutoSize = true, Dock = DockStyle.Fill, Margin = new Padding(0, 0, 0, 10)
             };
             layout.Controls.Add(intro, 0, 1);

@@ -7,6 +7,6 @@ T2D Studio phát triển các ứng dụng gọn nhẹ, riêng tư và dễ dùn
 
 ## CMkey cho Windows
 
-CMkey là bộ gõ portable chạy trực tiếp từ khay hệ thống, gồm Telex tiếng Việt, chế độ English, chế độ Bình thường và tùy biến ký tự. Không cần cài đặt.
+CMkey cho Windows là công cụ biến đổi ký tự từ bàn phím, hoạt động qua biểu tượng khay hệ thống. Chạy trực tiếp, không cần cài đặt; có Telex tiếng Việt, English, Bình thường và Cá nhân hóa ký tự.
 
 Mã nguồn và hướng dẫn sử dụng nằm trong [windows-app/](windows-app/).
