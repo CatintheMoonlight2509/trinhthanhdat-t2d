@@ -4,7 +4,7 @@ CMkey cho Windows là công cụ biến đổi ký tự từ bàn phím, hoạt 
 
 ## Cách dùng
 
-1. Tải `CMkey.exe` từ [GitHub Release chính thức](https://github.com/CatintheMoonlight2509/trinhthanhdat-t2d/releases/tag/v1.0.1).
+1. Tải `CMkey.exe` từ [GitHub Release chính thức](https://github.com/CatintheMoonlight2509/trinhthanhdat-t2d/releases/tag/v1.0.0).
 2. Chạy file EXE; biểu tượng CMkey xuất hiện ở khay hệ thống.
 3. Nhấp trái biểu tượng để bật/tắt Telex tiếng Việt.
 4. Nhấp phải để chọn Tiếng Việt, English, Bình thường hoặc Cá nhân hóa ký tự.
