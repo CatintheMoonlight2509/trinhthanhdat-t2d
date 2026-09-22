@@ -49,6 +49,21 @@ namespace CMkeyCombat
         public static readonly Dictionary<char, string> BuiltInCustomOverrides = new Dictionary<char, string>();
         public static readonly Dictionary<char, string> CustomOverrides = new Dictionary<char, string>();
 
+        // Default 2 keeps the built-in uppercase map and uses Latin small caps for lowercase ASCII.
+        // U+1A3E TAI THAM LETTER MA is a temporary stand-in for a small-capital Q.
+        public static Dictionary<char, string> CreateDefault2Overrides()
+        {
+            return new Dictionary<char, string>
+            {
+                {'a', "ᴀ"}, {'b', "ʙ"}, {'c', "ᴄ"}, {'d', "ᴅ"}, {'e', "ᴇ"},
+                {'f', "ꜰ"}, {'g', "ɢ"}, {'h', "ʜ"}, {'i', "ɪ"}, {'j', "ᴊ"},
+                {'k', "ᴋ"}, {'l', "ʟ"}, {'m', "ᴍ"}, {'n', "ɴ"}, {'o', "ᴏ"},
+                {'p', "ᴘ"}, {'q', "ᨾ"}, {'r', "ʀ"}, {'s', "ꜱ"}, {'t', "ᴛ"},
+                {'u', "ᴜ"}, {'v', "ᴠ"}, {'w', "ᴡ"}, {'x', "x"}, {'y', "ʏ"},
+                {'z', "ᴢ"}
+            };
+        }
+
         public static void LoadCustomOverrides()
         {
             CustomOverrides.Clear();

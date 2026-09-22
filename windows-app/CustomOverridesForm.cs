@@ -94,13 +94,24 @@ namespace CMkeyCombat
             _replacementBox.Leave += (s, e) => ApplyTypedReplacement();
             layout.Controls.Add(_replacementBox, 1, 1);
 
+            var presetButtons = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Bottom, FlowDirection = FlowDirection.TopDown, WrapContents = false,
+                AutoSize = true, Margin = new Padding(0), Padding = new Padding(0)
+            };
+            var default1 = new Button { Text = "Mặc định 1", AutoSize = false, Size = new Size(104, 28), Margin = new Padding(6, 0, 0, 7) };
+            var default2 = new Button { Text = "Mặc định 2", AutoSize = false, Size = new Size(104, 28), Margin = new Padding(6, 0, 0, 0) };
+            default1.Click += (s, e) => ApplyDefault1();
+            default2.Click += (s, e) => ApplyDefault2();
+            presetButtons.Controls.Add(default1); presetButtons.Controls.Add(default2);
+
             var buttons = new FlowLayoutPanel { Dock = DockStyle.Bottom, FlowDirection = FlowDirection.RightToLeft, AutoSize = true, Margin = new Padding(0) };
-            var cancel = new Button { Text = "Hủy", DialogResult = DialogResult.Cancel, AutoSize = true, Margin = new Padding(8, 0, 0, 0) };
-            var save = new Button { Text = "Lưu", AutoSize = true };
+            var cancel = new Button { Text = "Hủy", DialogResult = DialogResult.Cancel, AutoSize = false, Size = new Size(80, 28), Margin = new Padding(8, 0, 0, 0) };
+            var save = new Button { Text = "Lưu", AutoSize = false, Size = new Size(80, 28), Margin = new Padding(0) };
             save.Click += (s, e) => SaveAndClose();
             buttons.Controls.Add(cancel); buttons.Controls.Add(save);
-            layout.SetColumnSpan(buttons, 2);
-            layout.Controls.Add(buttons, 0, 2);
+            layout.Controls.Add(presetButtons, 0, 2);
+            layout.Controls.Add(buttons, 1, 2);
             AcceptButton = save; CancelButton = cancel;
 
             _sourceBox.SelectedIndex = 0;
@@ -249,6 +260,33 @@ namespace CMkeyCombat
                 int separator = token.IndexOf(" — ", StringComparison.Ordinal);
                 if (separator >= 0) token = token.Substring(0, separator).Trim();
                 if (!String.IsNullOrEmpty(token)) yield return token;
+            }
+        }
+
+        void ApplyDefault1()
+        {
+            ApplyPreset(new Dictionary<char, string>());
+        }
+
+        void ApplyDefault2()
+        {
+            ApplyPreset(CombatMap.CreateDefault2Overrides());
+        }
+
+        void ApplyPreset(IDictionary<char, string> preset)
+        {
+            try
+            {
+                CustomOverridesStore.Save(preset);
+                CombatMap.ReplaceCustomOverrides(preset);
+                _workingOverrides.Clear();
+                foreach (var entry in preset) _workingOverrides[entry.Key] = entry.Value;
+                _replacementEdited = false;
+                LoadSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Không thể lưu thiết lập: " + ex.Message, "CMkey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -72,7 +72,7 @@ namespace CMkeyCombat
             }, 0, 0);
             var intro = new Label
             {
-                Text = "CMkey cho Windows là công cụ biến đổi ký tự từ bàn phím,\r\nhoạt động qua biểu tượng khay hệ thống.",
+                Text = "CMkey for Windows - công cụ biến đổi ký tự theo thời gian thực,\r\nnhận và thay thế ký tự theo thiết lập mà bạn muốn, có sẵn trong Cá nhân hóa.",
                 AutoSize = true, Dock = DockStyle.Fill, Margin = new Padding(0, 0, 0, 10)
             };
             layout.Controls.Add(intro, 0, 1);
@@ -107,7 +107,7 @@ namespace CMkeyCombat
             layout.SetColumnSpan(disclaimer, 2);
             var donation = new Label
             {
-                Text = "ỦNG HỘ PHÁT TRIỂN CMKEY\r\n\r\nBạn thấy CMkey thế nào? Mời T2D Team một ly cà phê để tụi mình tiếp tục chăm chút CMkey nhé! ☕\r\nDonate MoMo: 0368161768",
+                Text = "ỦNG HỘ PHÁT TRIỂN CMKEY\r\n\r\nBạn thấy CMkey thế nào? Mời T2D Team một ly cà phê để tụi mình tiếp tục chăm chút CMkey nhé! ☕\r\nDonate MoMo: 0368161768    hoặc Paypal: lazy.cat2509@gmail.com",
                 AutoSize = true, Dock = DockStyle.Fill, Padding = new Padding(14),
                 Margin = new Padding(0, 0, 0, 12), BackColor = Color.Lavender,
                 ForeColor = Color.FromArgb(65, 43, 112)
